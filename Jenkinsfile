@@ -4,7 +4,7 @@ pipeline{
     stages{
         stage('checkout'){
             steps{
-                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_java', url: 'https://github.com/goelvijay/MavenHelloWorld.git']]])
+                checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: 'github_java', url: 'https://github.com/ayoubon1/maven']]])
             }
         }
         stage('build'){
